@@ -36,9 +36,7 @@ public class ProcessingInventory extends ItemStackHandler {
 	}
 
 	public void clear() {
-		for (int i = 0; i < stacks.length; i++) {
-			stacks[i] = ItemStack.EMPTY;
-		}
+		setSize(getSlots());
 		remainingTime = 0;
 		recipeDuration = 0;
 		appliedRecipe = false;
